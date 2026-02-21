@@ -9,11 +9,11 @@ resource "aws_s3_bucket" "demo_audit" {
 
 resource "aws_security_group" "demo_open" {
   name        = "demo-open-sg-${var.environment}"
-  description = "Demo SG with open ingress — intentional finding"
+  description = "Demo SG with open ingress intentional finding"
 
   ingress {
     # checkov:skip=CKV_AWS_25: intentional demo finding
-    description = "Open SSH — intentional finding for demo"
+    description = "Open SSH intentional finding for demo"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
