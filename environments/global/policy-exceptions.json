@@ -1,0 +1,11 @@
+{
+  "global_exceptions": [
+    {
+      "rule": "require_s3_lifecycle",
+      "resource": "*",
+      "reason": "S3 lifecycle policies not implemented org-wide",
+      "approved_by": "Platform Team",
+      "expires": "2026-12-31"
+    }
+  ]
+}

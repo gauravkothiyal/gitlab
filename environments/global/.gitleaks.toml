@@ -1,0 +1,26 @@
+# Global Gitleaks Allowlist
+#
+# Known false positives and intentional patterns that should not
+# trigger secret detection. Add entries here to suppress org-wide.
+#
+# Docs: https://github.com/gitleaks/gitleaks#configuration
+
+title = "Global Gitleaks Configuration"
+
+[allowlist]
+  description = "Global allowlist for known false positives"
+
+  # Paths that are safe to ignore (regex)
+  paths = [
+    '''environments/.*\.tfvars''',
+    '''\.terraform/.*''',
+    '''\.trivyignore''',
+  ]
+
+  # Regex patterns on the matched line to ignore
+  regexTarget = "line"
+  regexes = [
+    '''EXAMPLE_.*''',
+    '''REPLACE_ME''',
+    '''arn:aws-us-gov:.*:ACCOUNT_ID:.*''',
+  ]

@@ -1,0 +1,12 @@
+# Global Trivy Exceptions
+# These vulnerability/misconfiguration IDs are skipped across all environments.
+# Add project-specific skips in environments/{env}/{region}/{component}/.trivyignore
+#
+# Find check IDs: https://avd.aquasec.com/
+
+# S3 lifecycle configuration — not implemented org-wide
+AVD-AWS-0090
+
+# Uncomment to skip other checks:
+# AVD-AWS-0132  # S3 access logging
+# AVD-AWS-0088  # S3 versioning

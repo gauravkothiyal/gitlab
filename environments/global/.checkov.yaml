@@ -1,0 +1,10 @@
+# Global Checkov Exceptions
+# These checks are skipped across all environments and components.
+# Add project-specific skips in environments/{env}/{region}/{component}/.checkov.yaml
+#
+# Find check IDs: https://www.checkov.io/5.Policy%20Index/all.html
+
+skip-check:
+  - CKV_AWS_300   # S3 lifecycle configuration — not implemented org-wide
+  # - CKV_AWS_18  # S3 access logging (uncomment to skip)
+  # - CKV_AWS_21  # S3 versioning (uncomment to skip)
